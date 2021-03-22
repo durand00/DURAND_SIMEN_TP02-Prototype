@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RbCharacterMovements : MonoBehaviour
 {
@@ -19,11 +20,16 @@ public class RbCharacterMovements : MonoBehaviour
 
     private bool isGrounded = true;
 
+    private Animator animatorPeasantMan;
+
     // Start is called before the first frame update
     void Start()
     {
         // Assigner le Rigidbody
         rb = GetComponent<Rigidbody>();
+
+        // Assigner l'animator
+        animatorPeasantMan = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +52,11 @@ public class RbCharacterMovements : MonoBehaviour
         {
             rb.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
         }
+
+        // Animations de mouvement
+        animatorPeasantMan.SetFloat("Horizontal", inputHorizontal);
+        animatorPeasantMan.SetFloat("Vertical", inputVertical);
+
     }
 
     private void FixedUpdate()
