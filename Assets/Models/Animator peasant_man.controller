@@ -18,7 +18,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 88cea3236d0c3c14d88f8365743eb919,
+    m_Motion: {fileID: -203655887218126122, guid: 8f3756792c34a4948b0fffb032a33123,
       type: 3}
     m_Threshold: 0.25
     m_Position: {x: -1, y: 0}
@@ -27,7 +27,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 07be7c86f461f7f429d181d71c10b9c0,
+    m_Motion: {fileID: -203655887218126122, guid: c255109859abee342a43fb7559d44a07,
       type: 3}
     m_Threshold: 0.5
     m_Position: {x: 1, y: 0}
@@ -36,7 +36,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: ed51089b671579d4d949774be27978f4,
+    m_Motion: {fileID: -203655887218126122, guid: 4ac4b1c9c9064f04b88c56279702a090,
       type: 3}
     m_Threshold: 0.75
     m_Position: {x: 0, y: -1}
@@ -69,13 +69,13 @@ AnimatorController:
   m_Name: Animator peasant_man
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Horizontal
+  - m_Name: horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Vertical
+  - m_Name: vertical
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0

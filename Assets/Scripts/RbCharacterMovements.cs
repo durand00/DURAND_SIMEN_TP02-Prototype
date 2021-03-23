@@ -54,8 +54,8 @@ public class RbCharacterMovements : MonoBehaviour
         }
 
         // Animations de mouvement
-        animatorPeasantMan.SetFloat("Horizontal", inputHorizontal);
-        animatorPeasantMan.SetFloat("Vertical", inputVertical);
+        animatorPeasantMan.SetFloat("horizontal", inputHorizontal);
+        animatorPeasantMan.SetFloat("vertical", inputVertical);
 
     }
 
