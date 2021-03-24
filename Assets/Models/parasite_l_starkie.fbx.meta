@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66e115f46c835bd438e93dd216c500f6
+guid: c0ca2264958d22d428ea343050040276
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -10,23 +10,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Peasant_Man_02
-    second: {fileID: 2100000, guid: a8b847d7d0c9a8844bb9a369539183ea, type: 2}
+      name: parasitezombie_Material
+    second: {fileID: 2100000, guid: 6ab650edc03eda24a9ecf5a98931cbb5, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Peasant_Man_diffuse
-    second: {fileID: 2800000, guid: c69a3fa29f019b94eb1823a36d22db24, type: 3}
+      name: parasiteZombie_diffuse
+    second: {fileID: 2800000, guid: cc6275547fdf05b47a58046da8011b67, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Peasant_Man_normal
-    second: {fileID: 2800000, guid: 0fb99c050f6e75143967d4e5a05b73af, type: 3}
+      name: parasiteZombie_normal
+    second: {fileID: 2800000, guid: 075ec8ca9d289d44886acf6dfe3abfb9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Peasant_Man_specular
-    second: {fileID: 2800000, guid: ccc8d81824b9c0643b9e78a4f595f48f, type: 3}
+      name: parasiteZombie_specular
+    second: {fileID: 2800000, guid: 1f78dd4495abe494a947ce36e42e456e, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -92,15 +92,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 7ebae9b24beb25247bed68a2a00a7242
-  - 86ae59aacc254e241bcb07818da40ce2
-  - 8f3756792c34a4948b0fffb032a33123
-  - 72ed3d5f284120c4ea47780cc4f9b419
-  - c255109859abee342a43fb7559d44a07
-  - 7e1fd2b5022f50b41be37010b015c013
-  - 8156de9c820f085459677355a58cab26
-  - af37b18c7209f784280fce6f37630922
-  - 4ac4b1c9c9064f04b88c56279702a090
+  - 94484ee8f76473e49b20e933b3fa7de7
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
