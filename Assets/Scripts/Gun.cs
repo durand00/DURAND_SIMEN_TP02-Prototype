@@ -5,7 +5,8 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public Transform barrelEnd;
-    public LineRenderer bulletLine;
+    public ParticleSystem particule;
+    //public LineRenderer bulletLine;
 
     void Start()
     {
@@ -23,13 +24,15 @@ public class Gun : MonoBehaviour
             RaycastHit hit;
 
             // PointA du LineRenderer
-            bulletLine.SetPosition(0, barrelEnd.position);
+            //bulletLine.SetPosition(0, barrelEnd.position);
             // Si le rayon impacte sur un objet, on le propulse
             if(Physics.Raycast(bulletRay, out hit))
             {
                 // PointB du LineRenderer (tir réussi)
-                bulletLine.SetPosition(1, hit.point);
+                //bulletLine.SetPosition(1, hit.point);
+                particule.Play();
                 Explode(hit.point);
+                
 
                 // Ragdoll?
                 Ragdoll ragdoll = hit.collider.GetComponentInParent<Ragdoll>();
@@ -37,11 +40,11 @@ public class Gun : MonoBehaviour
                     ragdoll.die = true;
 
             }
-            else
-            {
-                // PointB du LineRenderer (tir raté)
-                bulletLine.SetPosition(1, barrelEnd.position + barrelEnd.forward * 20f);
-            }
+            //else
+            //{
+            //    // PointB du LineRenderer (tir raté)
+            //    bulletLine.SetPosition(1, barrelEnd.position + barrelEnd.forward * 20f);
+            //}
         }
 
     }
@@ -59,13 +62,14 @@ public class Gun : MonoBehaviour
             if(rb!=null)
             {
                 rb.AddExplosionForce(5f, impactPosition, 5f, 1f, ForceMode.Impulse);
+                particule.Play();
             }
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(barrelEnd.position, barrelEnd.forward*20f);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawRay(barrelEnd.position, barrelEnd.forward*20f);
+    //}
 }

@@ -16,6 +16,10 @@ public class AlienDeplacement : MonoBehaviour
     public float attackRepeaTime = 1;
     private float attackTime;
 
+    //public void Die();
+
+    public bool dead;
+
 
     private NavMeshAgent alien;
 
@@ -33,9 +37,10 @@ public class AlienDeplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Si le zombie n'est pas occupé
-        if (!isAlienBusy)
+        // Si le zombie n'est pas occupé et que l'alien n'est pas mort
+        if (!isAlienBusy && dead == false)
         {
+            
 
             Vector3 newDestination = new Vector3(Random.Range(12f, 8f), 1f, Random.Range(-12f, 12));
 
@@ -46,6 +51,9 @@ public class AlienDeplacement : MonoBehaviour
 
     void DelayedUpdate()
     {
+        if (dead == true)
+            return;
+
         // Creer un rayon entre la police et le joueur
         RaycastHit hit;
 
@@ -62,8 +70,10 @@ public class AlienDeplacement : MonoBehaviour
                 StartCoroutine(GoToDestination(hit.point, runningSpeed));
 
             }
-
+            
         }
+        
+            
     }
 
     // Coroutine de déplacements
@@ -88,5 +98,11 @@ public class AlienDeplacement : MonoBehaviour
 
         //Je suis rendu a la destination et j'ai pris ma pause
         isAlienBusy = false;
+    }
+
+    public void Die()
+    {
+        dead = true;
+        alien.isStopped = true;
     }
 }

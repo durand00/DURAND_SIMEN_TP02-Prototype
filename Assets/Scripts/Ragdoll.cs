@@ -7,6 +7,13 @@ public class Ragdoll : MonoBehaviour
     public bool die;
     Rigidbody[] ragdollRbs;
     Animator animator;
+    public bool dead;
+    //public void mourir();
+
+  
+     
+
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -41,8 +48,12 @@ public class Ragdoll : MonoBehaviour
     {
         // Desactiver l'animator
         animator.enabled = false;
+        dead = true;
+        GetComponent < AlienDeplacement> ().Die();
         // Activer le Ragdoll
         ToggleRbs(false);
+        
+        
     }
 
     
