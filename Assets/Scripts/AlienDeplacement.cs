@@ -25,7 +25,7 @@ public class AlienDeplacement : MonoBehaviour
 
     private bool isAlienBusy = false;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         attackTime = Time.time;
@@ -34,10 +34,10 @@ public class AlienDeplacement : MonoBehaviour
         InvokeRepeating("DelayedUpdate", 1f, 1f);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        // Si le zombie n'est pas occupé et que l'alien n'est pas mort
+        // Si l'alien n'est pas occupé et que l'alien n'est pas mort
         if (!isAlienBusy && dead == false)
         {
             
@@ -46,7 +46,7 @@ public class AlienDeplacement : MonoBehaviour
 
             StartCoroutine(GoToDestination(newDestination, walkingSpeed));
         }
-       // alien.destination = target.position;
+      
     }
 
     void DelayedUpdate()
@@ -54,7 +54,7 @@ public class AlienDeplacement : MonoBehaviour
         if (dead == true)
             return;
 
-        // Creer un rayon entre la police et le joueur
+        // Creer un rayon entre les aliens et le joueur
         RaycastHit hit;
 
         if (Physics.Linecast(eyes.position, playerHead.position, out hit))
@@ -62,7 +62,7 @@ public class AlienDeplacement : MonoBehaviour
             // Si le rayon touche le joueur
             if (hit.transform.CompareTag("Player"))
             {
-                // le zombie poursuit le joueur( a sa position actuelle)
+                // l'alien poursuit le joueur( a sa position actuelle)
                 Debug.Log("Le joueur est en vue!");
 
                 // Arreter la coroutine en cours

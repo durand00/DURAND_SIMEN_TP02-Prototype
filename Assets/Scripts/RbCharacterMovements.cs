@@ -59,9 +59,7 @@ public class RbCharacterMovements : MonoBehaviour
             animatorPeasantMan.SetTrigger("Jump");
         }
 
-        // Animations de mouvement
-        //animatorPeasantMan.SetFloat("horizontal", inputHorizontal);
-        //animatorPeasantMan.SetFloat("vertical", inputVertical);
+       
 
         // Courir
         if (Input.GetKey(KeyCode.LeftShift))

@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         // Si je fais feu
@@ -41,11 +41,7 @@ public class Gun : MonoBehaviour
                     ragdoll.die = true;
 
             }
-            //else
-            //{
-            //    // PointB du LineRenderer (tir raté)
-            //    bulletLine.SetPosition(1, barrelEnd.position + barrelEnd.forward * 20f);
-            //}
+           
         }
 
     }
@@ -68,9 +64,5 @@ public class Gun : MonoBehaviour
         }
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawRay(barrelEnd.position, barrelEnd.forward*20f);
-    //}
+    
 }

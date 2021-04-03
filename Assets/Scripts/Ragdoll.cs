@@ -8,14 +8,8 @@ public class Ragdoll : MonoBehaviour
     Rigidbody[] ragdollRbs;
     Animator animator;
     public bool dead;
-    //public void mourir();
+   
 
-  
-     
-
-    
-
-    // Start is called before the first frame update
     void Awake()
     {
         ragdollRbs = GetComponentsInChildren<Rigidbody>();
@@ -24,7 +18,7 @@ public class Ragdoll : MonoBehaviour
         ToggleRbs(true);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if(die == true)
