@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour
         // Si je fais feu
         if(Input.GetMouseButtonDown(0))
         {
+            particule.Play();
             // je fais un rayon à partir du BarrelEnd
             Ray bulletRay = new Ray(barrelEnd.position, barrelEnd.forward);
             RaycastHit hit;
@@ -30,7 +31,7 @@ public class Gun : MonoBehaviour
             {
                 // PointB du LineRenderer (tir réussi)
                 //bulletLine.SetPosition(1, hit.point);
-                particule.Play();
+               
                 Explode(hit.point);
                 
 
